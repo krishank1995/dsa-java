@@ -6,7 +6,7 @@ public interface Sort<T> {
 
   T[] sort (T[] elements);
 
-  public static Object[] execute(Sort sortingAlgorithm,Integer[] input){
+  public static Object[] execute(Sort sortingAlgorithm,Object[] input){
     if(sortingAlgorithm.getClass().isAnnotationPresent(Timed.class)){
       long startTime = System.nanoTime();
       Object[] result = sortingAlgorithm.sort(input);
