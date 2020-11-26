@@ -6,11 +6,11 @@ import java.io.*;
 public class Application {
 
   public static void main(String[] args) {
-    Integer[] testCase = InputOutputHelper.generateSortingTestCaseForInt(50000);
+    Integer[] testCase = InputOutputHelper.generateSortingTestCaseForInt(5);
     InputOutputHelper.consolePrintArray("Input:",testCase);
-    // Bubble Sort
+    // Selection Sort
     InputOutputHelper.consolePrintArray("Selection Output:",Sort.execute(new Selection(), testCase));
-    //Selection Sort
+    //Bubble Sort
     InputOutputHelper.consolePrintArray("Bubble Output:",Sort.execute(new Bubble(), testCase));
     }
 }
