@@ -1,10 +1,17 @@
-package algorithms;
+package algorithms.impl;
+
+import algorithms.Sort;
+import algorithms.aspects.ConsoleSink;
+import algorithms.aspects.Timed;
+import algorithms.aspects.ValidateExecution;
 
 /*
 Description:
 
 */
 @Timed
+//@ConsoleSink
+@ValidateExecution
 public class Selection implements Sort<Integer> {
 
   @Override

@@ -1,13 +1,17 @@
-package algorithms;
+package algorithms.impl;
 
-import java.lang.reflect.Array;
-import java.util.List;
+import algorithms.Sort;
+import algorithms.aspects.ConsoleSink;
+import algorithms.aspects.Timed;
+import algorithms.aspects.ValidateExecution;
 
 /*
 Description:
 
 */
 @Timed
+//@ConsoleSink
+@ValidateExecution
 public class Bubble implements Sort<Integer> {
 
   @Override

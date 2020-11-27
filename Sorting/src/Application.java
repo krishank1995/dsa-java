@@ -1,16 +1,21 @@
-import algorithms.Bubble;
-import algorithms.Selection;
+import IoHelper.InputOutputHelper;
+import algorithms.impl.Bubble;
+import algorithms.impl.Selection;
 import algorithms.Sort;
-import java.io.*;
 
 public class Application {
 
+  public static final Integer NUMBER_OF_TEST_CASES = 2;
+  public static final Integer SIZE_OF_TEST_CASE = 50000;
+
   public static void main(String[] args) {
-    Integer[] testCase = InputOutputHelper.generateSortingTestCaseForInt(5);
-    InputOutputHelper.consolePrintArray("Input:",testCase);
+    Integer[][] testCases = InputOutputHelper.generateSortingTestCaseForInt(SIZE_OF_TEST_CASE,NUMBER_OF_TEST_CASES);
+
     // Selection Sort
-    InputOutputHelper.consolePrintArray("Selection Output:",Sort.execute(new Selection(), testCase));
+    Sort.execute(new Selection(), testCases[0]);
+
     //Bubble Sort
-    InputOutputHelper.consolePrintArray("Bubble Output:",Sort.execute(new Bubble(), testCase));
-    }
+    Sort.execute(new Bubble(), testCases[1]);
+
+  }
 }
